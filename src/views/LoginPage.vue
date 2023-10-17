@@ -28,7 +28,6 @@
         <div class="flex gap-2 mt-4 mx-auto justify-center">
           <p>Esqueceu a senha?</p>
           <a href="">Redefinir senha</a>
-          {{loginResponse}}
         </div>
 
         <div class="w-full mt-16">
@@ -36,7 +35,8 @@
           <ion-button expand="block">Cadastre-se</ion-button>
         </div>
       </div>
-      <ion-toast :is-open="isOpen" :message="loginResponse" :duration="5000"></ion-toast>
+      <ion-toast :is-open="isOpen" :message="loginResponse" :duration="5000"
+        @didDismiss="hideLoginResponse()"></ion-toast>
     </ion-content>
   </ion-page>
 </template>
@@ -55,6 +55,10 @@ function showLoginResponse(value: boolean, message: string) {
   loginResponse.value = message
 }
 
+function hideLoginResponse() {
+  isOpen.value = false
+}
+
 async function handleLoginSubmit() {
   try {
     const response = await fetch('http://localhost:3000/login', {
@@ -64,8 +68,11 @@ async function handleLoginSubmit() {
       },
       body: JSON.stringify({ email: email.value, password: password.value })
     })
-    const data = await response.json()
-    showLoginResponse(true, JSON.stringify(data))
+    const data: { jwt: string, message: string } = await response.json()
+    showLoginResponse(true, data.message)
+    if (data.jwt) {
+      localStorage.setItem('jwt', data.jwt)
+    }
   } catch (error: any) {
     console.log(error.message)
     showLoginResponse(true, JSON.stringify(error))
