@@ -11,6 +11,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     component: () => import('@/views/LoginPage.vue')
   },
+
+  {
+    path: '/start',
+    component: () => import('@/views/StartPage.vue')
+  },
+
+  {
+    path: '/splash',
+    component: () => import('@/views/SplashPage.vue')
+  },
   // {
   //   path: '/tabs/',
   //   component: TabsPage,
