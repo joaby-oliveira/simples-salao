@@ -21,6 +21,14 @@ const routes: Array<RouteRecordRaw> = [
     path: '/splash',
     component: () => import('@/views/SplashPage.vue')
   },
+  {
+    path: '/esqueceusenha',
+    component: () => import('@/views/EsqueceusenhaPage.vue')
+  },
+  {
+    path: '/criarconta',
+    component: () => import('@/views/CriarcontaPage.vue')
+  },
   // {
   //   path: '/tabs/',
   //   component: TabsPage,
