@@ -12,11 +12,17 @@
               Enviamos um código de 4 dígitos pra o e-mail  {}
             </h4>
           </header>
-            <ion-item>
+            <ion-item class="flex flex-col gap-4">
               <ion-label>Código</ion-label>
               <ion-input type="codigo"></ion-input>
             </ion-item>
-            <ion-button type="submit" expand="block" fill="solid">Receber Codigo</ion-button>
+            <a href="http://localhost:5173/forgotpasswordtre">
+            <ion-button type="submit" expand="block" fill="solid">Prosseguir</ion-button>
+            </a>
+            <div class="flex gap-2 mt-4 mx-auto justify-center">
+            <p>Não recebi nenhum codigo,</p>
+            <a href="http://localhost:5173/forgotpassword">Escolher outro e-mail</a>
+        </div>
         </div>
       </ion-content>
     </ion-page>

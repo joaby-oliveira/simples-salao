@@ -12,12 +12,14 @@
             É possível recuperá-la, basta apenas preencher seu e-mail
           </h4>
         </header>
-          <ion-item>
+          <ion-item class="flex flex-col gap-4">
             <ion-label>E-mail</ion-label>
-            <ion-input type="email" placeholder="Ex.: nome@email.com" v-model="email"></ion-input>
+            <ion-input  type="email" placeholder="Ex.: nome@email.com" v-model="email"></ion-input>
           </ion-item>
+          <a href="http://localhost:5173/forgotpasswordtwo">
           <ion-button type="submit" expand="block" fill="solid">Receber Codigo</ion-button>
-      </div>
+          </a>
+        </div>
     </ion-content>
   </ion-page>
 </template>
