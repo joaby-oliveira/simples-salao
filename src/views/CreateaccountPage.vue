@@ -20,7 +20,7 @@
             <ion-item>
               <ion-label>E-mail</ion-label>
               <ion-input type="email" placeholder="Ex.: nome@email.com"></ion-input>
-            </ion-item
+            </ion-item>
             <ion-item>
               <ion-label>Senha</ion-label>
               <ion-input type="password" placeholder="No mínimo 8 caracteres" :minlength="8" :required="true"

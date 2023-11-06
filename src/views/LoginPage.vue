@@ -27,12 +27,14 @@
 
         <div class="flex gap-2 mt-4 mx-auto justify-center">
           <p>Esqueceu a senha?</p>
-          <a href="">Redefinir senha</a>
+          <a href="http://localhost:5173/esqueceusenha">Redefinir senha</a>
         </div>
 
         <div class="w-full mt-16">
           <p class="text-center pb-2">Não tem uma conta?</p>
+          <a href="http://localhost:5173/criarconta">
           <ion-button expand="block">Cadastre-se</ion-button>
+          </a>
         </div>
       </div>
       <ion-toast :is-open="isOpen" :message="loginResponse" :duration="5000"

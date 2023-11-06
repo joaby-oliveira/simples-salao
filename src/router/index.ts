@@ -22,13 +22,18 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/SplashPage.vue')
   },
   {
-    path: '/esqueceusenha',
-    component: () => import('@/views/EsqueceusenhaPage.vue')
+    path: '/forgotpassword',
+    component: () => import('@/views/ForgotpasswordPage.vue')
   },
   {
-    path: '/criarconta',
-    component: () => import('@/views/CriarcontaPage.vue')
+    path: '/createaccount',
+    component: () => import('@/views/CreateaccountPage.vue')
   },
+  {
+    path: '/forgotpasswordtwo',
+    component: () => import('@/views/ForgotpasswordtwoPage.vue')
+  },
+
   // {
   //   path: '/tabs/',
   //   component: TabsPage,
