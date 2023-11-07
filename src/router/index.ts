@@ -37,6 +37,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/forgotpasswordtre',
     component: () => import('@/views/ForgotpasswordtrePage.vue')
   },
+  {
+    path: '/home',
+    component: () => import('@/views/HomePage.vue')
+  },
   // {
   //   path: '/tabs/',
   //   component: TabsPage,
