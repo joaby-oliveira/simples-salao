@@ -75,6 +75,10 @@ async function handleLoginSubmit() {
     if (data.jwt) {
       localStorage.setItem('jwt', data.jwt)
     }
+    console.log(response)
+    if (response.ok) {
+      location.href = "/home";
+    }
   } catch (error: any) {
     console.log(error.message)
     showLoginResponse(true, JSON.stringify(error))
