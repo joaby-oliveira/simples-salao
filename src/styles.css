@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+form {
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+form ion-item,
+form ion-button {
+  width: 100%;
+}
+ion-button {
+  width: 80vw;
+  margin: auto;
+}
+
+a {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 650px) {
+  form,
+  ion-button {
+    width: 500px;
+  }
+}
